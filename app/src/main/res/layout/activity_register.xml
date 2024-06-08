@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <include layout="@layout/toolbar_layout_right_text"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_below="@+id/toolbar_layout"
+            android:id="@+id/input_layout"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="2.3sp"
+                android:text="Enter details to Register" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Kindly fill in your information below to create\n your brand new PaperBox account"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:id="@+id/et_username"
+                android:padding="15dp"
+                android:hint="Username"
+                android:textSize="14sp"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="#d1d1d1"
+                android:layout_height="55dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:id="@+id/et_email"
+                android:padding="15dp"
+                android:hint="Email"
+                android:textSize="14sp"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="#d1d1d1"
+                android:layout_height="55dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/et_pass"
+                android:padding="14dp"
+                android:hint="Password"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="#d1d1d1"
+                android:layout_height="55dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:id="@+id/et_phone"
+                android:padding="15dp"
+                android:hint="Phone Number"
+                android:textSize="14sp"
+                android:inputType="phone"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="#d1d1d1"
+                android:layout_height="55dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:id="@+id/tv_date_birth"
+                android:padding="15dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="Date of Birth"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_calendar"
+                android:background="@drawable/square_corner_grey"
+                android:layout_height="55dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:id="@+id/et_postal_code"
+                android:padding="15dp"
+                android:hint="Postal Code"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:background="@drawable/bg_curve"
+                android:backgroundTint="#d1d1d1"
+                android:layout_height="55dp"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/button_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:cpb_cornerRadius="8dp"
+                app:cpb_colorIndicatorBackground="@color/colorPrimary"
+                app:cpb_selectorIdle="@color/colorPrimary"
+                app:cpb_colorProgress="@color/black"
+                app:cpb_colorIndicator="@color/white"
+                android:textColor="@color/cpb_white"
+                android:textSize="15sp"
+                app:cpb_textComplete="Success"
+                app:cpb_textError="Error"
+                app:cpb_textIdle="GET Started" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</RelativeLayout>
