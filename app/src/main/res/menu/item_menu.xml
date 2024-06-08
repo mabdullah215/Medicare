@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:orderInCategory="100"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_appointment"
+        android:orderInCategory="100"
+        android:title="Appointments"
+        android:icon="@drawable/ic_appointment"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_consulation"
+        android:orderInCategory="100"
+        android:title="Consulation"
+        android:icon="@drawable/ic_chat"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:orderInCategory="100"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notification"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        android:icon="@drawable/ic_setting"
+        app:showAsAction="always" />
+
+
+
+</menu>
