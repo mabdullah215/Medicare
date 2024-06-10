@@ -10,6 +10,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,12 +24,23 @@ public class SplashActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        FirebaseAuth mAuth=FirebaseAuth.getInstance();
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().setPersistenceEnabled(false).build();
+        FirebaseFirestore.getInstance().setFirestoreSettings(settings);
         TimerTask task = new TimerTask()
         {
             @Override
             public void run()
             {
-                startActivity(new Intent(getBaseContext(),WelcomeActivity.class));
+                if(mAuth.getCurrentUser()==null)
+                {
+                    startActivity(new Intent(getBaseContext(),LoginActivity.class));
+                }
+                else
+                {
+                    startActivity(new Intent(getBaseContext(),MainActivity.class));
+                }
+
                 Animatoo.INSTANCE.animateSlideLeft(SplashActivity.this);
                 finish();
             }

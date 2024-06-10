@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "433804622780",
+    "project_id": "oman-clinics-pro",
+    "storage_bucket": "oman-clinics-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433804622780:android:6bdccd4bbd4470277849b9",
+        "android_client_info": {
+          "package_name": "com.syedapps.medicare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlEsK2_ThQz84xzwCpYco2ftN6Bd_MjCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

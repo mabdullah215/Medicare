@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookAppointment">
+
+    <include layout="@layout/toolbar_layout_right_text"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/calendr_view"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/uber_move_medium"
+                android:textColor="#1a1a1a"
+                android:text="Available Time"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/time_list"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/uber_move_medium"
+                android:textColor="#1a1a1a"
+                android:text="What do you need"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:text="Consultation"
+                    android:textSize="18sp"
+                    android:layoutDirection="rtl"
+                    android:layout_height="28dp"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:text="Treatment"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layoutDirection="rtl"
+                    android:layout_height="28dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/uber_move_medium"
+                android:textColor="#1a1a1a"
+                android:text="Reminder"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Select alert"
+                    android:textColor="@color/black"
+
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="30 mins before"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:text="Confirm"
+                android:layout_marginTop="36dp"
+                android:id="@+id/button_confirm"
+                app:cornerRadius="8dp"
+                android:layout_height="60dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

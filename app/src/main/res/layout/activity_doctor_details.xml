@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar_layout_right_text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:id="@+id/img_profile"
+                    android:src="@drawable/img_doc_list_2"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/tv_name"
+                        android:text="Martin Luther"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_distance"
+                        android:textColor="#b2b2b2"
+                        android:text="0.31 mi away-Dentist"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:layout_width="80dp"
+                            android:id="@+id/material_rating"
+                            android:maxHeight="18dp"
+                            android:saveEnabled="false"
+                            android:numStars="5"
+                            android:rating="5"
+                            android:stepSize="1"
+                            android:isIndicator="true"
+                            app:mrb_progressTint="#FFC969"
+                            android:layout_alignParentRight="true"
+                            style="@style/Widget.MaterialRatingBar.RatingBar"
+                            android:layout_height="28dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="21 reviews"
+                            android:id="@+id/tv_reviews"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:drawableLeft="@drawable/ic_clock"
+                        android:text="9:30 AM-2:00 PM"
+                        android:drawablePadding="8dp"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_time"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="$50"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Per hour"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="21"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Reviews"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="500"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Patients"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                app:cornerRadius="8dp"
+                android:insetBottom="0dp"
+                android:id="@+id/button_appointment"
+                android:insetTop="0dp"
+                android:text="Book Appointment"
+                android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_map"
+                android:layout_height="300dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="43 Bourke street, Newbridge NSW 837 Raffles Place, Boat Band M83"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Biography"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Medical School"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Harvard Medical School"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Boston, Massachusetts, USA"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Education"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="UCL, MIT , Standford University"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Awards"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="CMS Stage 1 EHR (2014), AAD Felow (2016)"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Reviews"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:src="@drawable/img_profile"
+                    android:id="@+id/img_layout"
+                    android:layout_height="42dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Janice Williams"
+                    android:fontFamily="@font/uber_move_bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_comment_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/img_layout"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tv_comment_name"
+                    android:layout_toRightOf="@id/img_layout"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content">
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:layout_width="80dp"
+                        android:maxHeight="18dp"
+                        android:saveEnabled="false"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"
+                        android:isIndicator="true"
+                        app:mrb_progressTint="#FFC969"
+                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="15 mins ago"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus."
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="More Reviews"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:drawableLeft="@drawable/img_add_review"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,14 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:id="@+id/pullToRefresh"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:overScrollMode="never"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/uber_move_bold"
+                    android:textColor="@color/black"
+                    android:text="Browse"
+                    android:id="@+id/tv_label"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_name"
+                    android:fontFamily="@font/uber_move_medium"
+                    android:layout_below="@+id/tv_label"
+                    android:layout_height="wrap_content"/>
+
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:id="@+id/user_img"
+                    android:src="@drawable/img_profile"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="36dp"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/category_list"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="wrap_content"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/uber_move_medium"
+                    android:textColor="@color/black"
+                    android:text="Nearby"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_view_profiles"
+                    android:layout_alignParentRight="true"
+                    android:text="View All"
+                    android:fontFamily="@font/uber_move_medium"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/profile_list"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_height="120dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_emergency"
+                        android:layout_height="80dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="90dp"
+                        android:text="Emergency"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/label_emergency"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="90dp"
+                        android:text="Urgent care open 24 hours nearby"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/label_emergency"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    app:strokeColor="#888888"
+                    app:strokeWidth="1dp"
+                    app:contentPadding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Top Rated"
+                        android:layout_gravity="center"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/img_down"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    app:strokeColor="#888888"
+                    app:strokeWidth="1dp"
+                    android:layout_marginRight="8dp"
+                    app:contentPadding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Sort"
+                        android:layout_gravity="center"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/img_sort"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    app:strokeColor="#888888"
+                    app:strokeWidth="1dp"
+                    app:contentPadding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Filter"
+                        android:layout_gravity="center"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/img_filter"
+                        android:layout_height="20dp"/>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/post_list"
+                android:layout_marginTop="16dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>
