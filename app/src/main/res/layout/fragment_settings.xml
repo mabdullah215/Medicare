@@ -1,14 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="match_parent"
-    tools:context=".fragments.SettingsFragment">
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/top_panel"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/uber_move_bold"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_panel"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Account Settings"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/uber_move_regular"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/square_corner"
+            android:backgroundTint="#f1f1f1"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Rewards &amp; Wallet"
+                android:padding="12dp"
+                android:drawableRight="@drawable/ic_path"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f2f2f2"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Payment Cards"
+                android:padding="12dp"
+                android:drawableRight="@drawable/ic_path"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f2f2f2"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Delete account"
+                android:padding="12dp"
+                android:id="@+id/tv_delete_account"
+                android:drawableRight="@drawable/ic_path"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f2f2f2"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Logout"
+                android:padding="12dp"
+                android:id="@+id/tv_logout"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_path"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/uber_move_regular"
+            android:text="About App"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/square_corner"
+            android:backgroundTint="#f1f1f1"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Terms &amp; Conditions"
+                android:padding="12dp"
+                android:id="@+id/tv_terms"
+                android:drawableRight="@drawable/ic_path"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f2f2f2"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="Contact Us"
+                android:id="@+id/tv_contact_us"
+                android:drawableRight="@drawable/ic_path"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -4,4 +4,20 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#3FD5DF</color>
     <color name="colorAccent">#3FD5DF</color>
+    <color name="status_complete">#9ee265</color>
+    <color name="status_cancelled">#e41e3f</color>
+
+    <color name="light_grey">#999999</color>
+    <color name="light_grey_chat">#f1f1f1</color>
+    <color name="color_green">#75bc49</color>
+    <color name="chip_default_background">#f2f2f2</color>
+    <color name="chip_default_text">#7d7f8e</color>
+    <color name="chat_grey">#707070</color>
+    <color name="shimmer_color">#eeeeee</color>
+    <color name="filter_color_default">#f2f2f2</color>
+    <color name="text_color_default">#666666</color>
+    <color name="box_color_default">#f1f1f1</color>
+    <color name="box_color_highlight">#7cadbb</color>
+    <color name="text_color_highlight">#ffffff</color>
+    <color name="chat_desc_color">#999999</color>
 </resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:padding="16dp"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/data_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_chat_view"
+            android:layout_marginBottom="16dp"
+            android:overScrollMode="never" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_chat_view"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/circle_corner"
+                android:backgroundTint="#f1f1f1"
+                android:layout_toStartOf="@+id/btn_send"
+                android:padding="10dp"
+                android:weightSum="10"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/text_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:textColor="#8b99a4"
+                    android:textColorHint="#8b99a4"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:hint="Message"
+                    android:inputType="text|textMultiLine|textCapSentences|textNoSuggestions"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/btn_send"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="Send"
+                android:src="@drawable/ic_chat_send" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/toolbar_layout_right_text" />
+
+
+
+</RelativeLayout>
